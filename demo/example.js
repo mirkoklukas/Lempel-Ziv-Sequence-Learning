@@ -7,7 +7,7 @@ var SequenceCoder = require('../lib/LZ78-sequence-coder.js');
 
 var coder  = new SequenceCoder({
      'alphabet': alphabet,
-     'backShift': 1
+     'backShift': 0
 });
 
 coder.learnSequence(inputSequence);

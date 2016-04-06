@@ -13,7 +13,7 @@ var SequenceCoder = require('../lib/LZ78-sequence-coder.js');
 
 var coder  = new SequenceCoder({
      'alphabet': alphabet,
-     'backShift': 1
+     'backShift': 0
 });
 
 coder.learnSequence(inputSequence);
@@ -21,20 +21,16 @@ coder.learnSequence(inputSequence);
 
 Console output:
 ```shell
+info: New Lempel-Ziv Sequence coder initialized: alphabet=[a, b, c, d, r], backShift=0
+info: (a back shift parameter of 0 corresponds to the regular LZ78 algorithm)
 info: Learn sequence: a b r a c a d a b r a
 info: Learned phrase: a
-info: Learned phrase: ab
 info: Learned phrase: b
-info: Learned phrase: br
 info: Learned phrase: r
-info: Learned phrase: ra
 info: Learned phrase: ac
-info: Learned phrase: c
-info: Learned phrase: ca
 info: Learned phrase: ad
-info: Learned phrase: d
-info: Learned phrase: da
-info: Learned phrase: abr
+info: Learned phrase: ab
+info: Learned phrase: ra
 ```
 
 
