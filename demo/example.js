@@ -6,8 +6,8 @@ var inputSequence = doc.split("")
 var SequenceCoder = require('../lib/LZ78-sequence-coder.js');
 
 var coder  = new SequenceCoder({
-	'alphabet': alphabet,
-	'backShift': 1
+     'alphabet': alphabet,
+     'backShift': 1
 });
 
 coder.learnSequence(inputSequence);
