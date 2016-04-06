@@ -3,9 +3,10 @@ notes.md
 
 node_modules/
 
-demo/
-
+demo/*
+!demo/example.js
 lib/*
+
 !lib/index.js
 !lib/simple-state-space.js
 !lib/LZ78-sequence-coder.js
