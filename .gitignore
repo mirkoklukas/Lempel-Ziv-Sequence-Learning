@@ -5,7 +5,7 @@ node_modules/
 
 demo/
 
-lib/
+lib/*
 !lib/index.js
 !lib/simple-state-space.js
 !lib/LZ78-sequence-coder.js
