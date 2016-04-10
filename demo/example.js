@@ -11,3 +11,11 @@ var coder  = new SequenceCoder({
 });
 
 coder.learnSequence(inputSequence);
+
+
+var viz = require('../lib/state-space-vizualizer.js');
+
+
+var cut = viz.cutThroughSpace(coder.stateSpace, inputSequence)
+var cutOnGrid = viz.toGrid(cut)
+console.log(JSON.stringify(cutOnGrid));
