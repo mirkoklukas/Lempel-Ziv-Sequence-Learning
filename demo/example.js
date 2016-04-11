@@ -7,7 +7,7 @@ var SequenceCoder = require('../lib/LZ78-sequence-coder.js');
 
 var coder  = new SequenceCoder({
      'alphabet': alphabet,
-     'backShift': 0
+     'backShift': 1
 });
 
 coder.learnSequence(inputSequence);
@@ -16,6 +16,6 @@ coder.learnSequence(inputSequence);
 var viz = require('../lib/state-space-vizualizer.js');
 
 
-var cut = viz.cutThroughSpace(coder.stateSpace, inputSequence)
-var cutOnGrid = viz.toGrid(cut)
-console.log(JSON.stringify(cutOnGrid));
+// var cut = viz.cutThroughSpace(coder.stateSpace, inputSequence)
+// var cutOnGrid = viz.toGrid(cut)
+// console.log(JSON.stringify(cutOnGrid));
