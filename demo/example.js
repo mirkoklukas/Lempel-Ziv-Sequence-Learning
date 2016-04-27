@@ -1,7 +1,14 @@
+var fs = require('fs');
+var file = fs.readFileSync('./data/calgary/book1', "utf8");
+var file += fs.readFileSync('./data/calgary/book2', "utf8");
+// console.log(file);
 
-var alphabet = ['a', 'b', 'c', 'd', 'r']
 
-var doc = 'abracadabra';
+// var alphabet = ['a', 'b', 'c', 'd', 'r']
+// var doc = 'abracadabra';
+var alphabet = file.split("")
+var doc = file;
+
 var inputSequence = doc.split("")
 var SequenceCoder = require('../lib/LZ78-sequence-coder.js');
 

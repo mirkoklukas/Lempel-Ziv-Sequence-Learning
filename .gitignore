@@ -11,3 +11,5 @@ lib/*
 !lib/simple-state-space.js
 !lib/LZ78-sequence-coder.js
 
+!lib/pattern-sequence-coder.js
+!lib/gen-state-space.js
