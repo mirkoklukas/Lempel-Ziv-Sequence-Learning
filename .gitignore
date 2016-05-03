@@ -3,6 +3,10 @@ notes.md
 
 node_modules/
 
+.DS_Store
+test/
+data/
+experiments/
 demo/*
 !demo/example.js
 lib/*

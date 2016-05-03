@@ -5,8 +5,8 @@ describe("Pattern coder", function () {
 
 	var coder = new Coder({
 		'alphabet': "abcdefghijklmnopqrstuvwxyz_".split(""),
-		'theta': 3
-	}).initializeZeros()
+		'theta': 1
+	}).initializeZeros();
 	var space = coder.stateSpace;
 
 
@@ -28,9 +28,12 @@ describe("Pattern coder", function () {
 
 	describe("#learning a sequence", function () {
 		it('...', function () {
-			var sequence = "the_cat_sat_on_the_mat".split("");
-			sequence = sequence.map(x=>[x]);
-			coder.learnSequence(sequence);
+			var sequence = "the_cat_sat_on_the_mat".split("").map(x=>[x]);
+			var result = coder.learnSequenceExtended(sequence);
+			result.forEach(function (r) {
+				console.log(JSON.stringify(r.pattern))
+				console.log(JSON.stringify(r.prediction))
+			})
 		});
 	});
 });
