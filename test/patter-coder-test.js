@@ -9,7 +9,6 @@ describe("Pattern coder", function () {
 	}).initializeZeros();
 	var space = coder.stateSpace;
 
-
 	// describe("#creating states and segments", function () {
 	// 	it('...', function () {
 	// 		space.addStateOver("c", [1,2,3]);
