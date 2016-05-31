@@ -1,28 +1,22 @@
-var fs = require('fs');
-var file = fs.readFileSync('./data/calgary/book1', "utf8");
-var file += fs.readFileSync('./data/calgary/book2', "utf8");
+
+
+var SequenceCoder = require('../lib/pattern-sequence-coder.js');
 // console.log(file);
 
 
-// var alphabet = ['a', 'b', 'c', 'd', 'r']
-// var doc = 'abracadabra';
-var alphabet = file.split("")
-var doc = file;
-
-var inputSequence = doc.split("")
-var SequenceCoder = require('../lib/LZ78-sequence-coder.js');
+var alphabet = ['a', 'b', 'c', 'd', 'r']
+var trainingSequence = 'abracadabra'.split('').map(x => [x]);
 
 var coder  = new SequenceCoder({
      'alphabet': alphabet,
-     'backShift': 1
+     'backShift': 0
 });
 
-coder.learnSequence(inputSequence);
+
+coder.reset();
+trainingSequence.forEach(function (L) {
+	console.log(coder.learn(L))
+})
 
 
-var viz = require('../lib/state-space-vizualizer.js');
 
-
-// var cut = viz.cutThroughSpace(coder.stateSpace, inputSequence)
-// var cutOnGrid = viz.toGrid(cut)
-// console.log(JSON.stringify(cutOnGrid));
